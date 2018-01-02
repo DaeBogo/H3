@@ -1,0 +1,29 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega168"</DEVICE>
+ <WORKING_DIR>D:\H3\Embedded\Embedded_I\Opgave3\Opgave3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>D:\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>D:\H3\Embedded\Embedded_I\Opgave3\Opgave3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>D:\H3\Embedded\Embedded_I\Opgave3\Opgave3\Debug\Opgave3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Opgave3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Opgave3.map</FILE>
+  <FILE>Opgave3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>D:\H3\Embedded\Embedded_I\Opgave3\Opgave3\main.asm</FILE><LINE>41</LINE></main>
+  <loop><FILE>D:\H3\Embedded\Embedded_I\Opgave3\Opgave3\main.asm</FILE><LINE>49</LINE></loop>
+  <start><FILE>D:\H3\Embedded\Embedded_I\Opgave3\Opgave3\main.asm</FILE><LINE>63</LINE></start>
+ </LABELS>
+</ASSEMBLER_INFO>
