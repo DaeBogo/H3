@@ -20,7 +20,7 @@ main:
 	ldi	r18, 0x02
 	out	SPH, r18	
 	ldi	r18, 0xFF	
-	out	SPL, r18	
+	out	SPL, r18
 
 loop:	
 	out	PORTB5,LED  
@@ -30,7 +30,7 @@ loop:
 
 ;********** Subrutinen Delay *************** 
 delay:
-	ldi	count,0xFF
+	ldi	count,0x14
 loop1:	
 	ldi	ZH,0xFF	
 	ldi	ZL,0xFF	
