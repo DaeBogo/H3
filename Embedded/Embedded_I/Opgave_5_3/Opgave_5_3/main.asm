@@ -60,27 +60,10 @@ loop2:
 
 ;Afprøv programmet, og dokumenter alle kodelinjerne.
 ;Hvordan ændres subrutinens forsinkelse til den dobbelte tid:
-;
-;_____________________________________________________________________
-;
+;	ldi count,0x02
+;	skal ændres til
+;	ldi count,0x04
 ;_____________________________________________________________________
 ; 
 ;___________________________________________________________
-;Opgave 6: En blinkende LED
-;
-;Med udgangspunkt i opgave 4 og 5, skal du nu lave et nyt projekt, som med en delay funktion får lysdioden til at blinke så langsomt, at det menneskelige øje kan registrere det.
-;Tiden, hvor dioden lyser, skal være dobbelt så lang som tiden hvor dioden er slukket.
-; 
-;Noter:__________________________________________________________________
-;
-;_______________________________________________________________________
-;
-;_______________________________________________________________________
-;
-;_______________________________________________________________________
-;
-;_______________________________________________________________________
-;
-;_______________________________________________________________________
-;
-;_______________________________________________________________________
+
