@@ -10,12 +10,12 @@
 			<CVariant></CVariant>
 			<CVendor>Atmel</CVendor>
 			<CVersion>1.2.0</CVersion>
-			<DefaultRepoPath>D:/Atmel\Studio\7.0\Packs</DefaultRepoPath>
+			<DefaultRepoPath>C:/Atmel Studio\7.0\Packs</DefaultRepoPath>
 			<DependentComponents xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 			<Description></Description>
 			<Files xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 				<d4p1:anyType i:type="FileInfo">
-					<AbsolutePath>D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</AbsolutePath>
+					<AbsolutePath>C:/Atmel Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</AbsolutePath>
 					<Attribute></Attribute>
 					<Category>include</Category>
 					<Condition>AVRASM</Condition>
@@ -26,7 +26,7 @@
 					<SourcePath></SourcePath>
 				</d4p1:anyType>
 				<d4p1:anyType i:type="FileInfo">
-					<AbsolutePath>D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</AbsolutePath>
+					<AbsolutePath>C:/Atmel Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</AbsolutePath>
 					<Attribute></Attribute>
 					<Category>header</Category>
 					<Condition>AVRASM</Condition>
@@ -37,11 +37,11 @@
 					<SourcePath></SourcePath>
 				</d4p1:anyType>
 				<d4p1:anyType i:type="FileInfo">
-					<AbsolutePath>D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\templates\main.asm</AbsolutePath>
+					<AbsolutePath>C:/Atmel Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\templates\main.asm</AbsolutePath>
 					<Attribute>template</Attribute>
 					<Category>source</Category>
 					<Condition>AVRASM</Condition>
-					<FileContentHash>XOliXBPSf8Df6MwDZEgaxg==</FileContentHash>
+					<FileContentHash>8Ku0L8PEI7VTQaJo6mXL2Q==</FileContentHash>
 					<FileVersion></FileVersion>
 					<Name>avrasm/templates/main.asm</Name>
 					<SelectString>Main file (.asm)</SelectString>
@@ -49,7 +49,7 @@
 				</d4p1:anyType>
 			</Files>
 			<PackName>ATmega_DFP</PackName>
-			<PackPath>D:/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/Atmel.ATmega_DFP.pdsc</PackPath>
+			<PackPath>C:/Atmel Studio/7.0/Packs/atmel/ATmega_DFP/1.2.150/Atmel.ATmega_DFP.pdsc</PackPath>
 			<PackVersion>1.2.150</PackVersion>
 			<PresentInProject>true</PresentInProject>
 			<ReferenceConditionId>ATmega168</ReferenceConditionId>
