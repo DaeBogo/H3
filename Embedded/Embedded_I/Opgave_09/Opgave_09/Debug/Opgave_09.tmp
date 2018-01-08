@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega168"</DEVICE>
+ <WORKING_DIR>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\Debug\Opgave_09.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Opgave_09.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Opgave_09.map</FILE>
+  <FILE>Opgave_09.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\main.asm</FILE><LINE>22</LINE></main>
+  <red><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\main.asm</FILE><LINE>44</LINE></red>
+  <mainloop><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\main.asm</FILE><LINE>30</LINE></mainloop>
+  <yellow><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\main.asm</FILE><LINE>51</LINE></yellow>
+  <green><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_09\Opgave_09\main.asm</FILE><LINE>58</LINE></green>
+ </LABELS>
+</ASSEMBLER_INFO>
