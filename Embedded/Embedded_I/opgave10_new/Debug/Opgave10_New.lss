@@ -1,12 +1,12 @@
 
-AVRASM ver. 2.2.7  C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm Tue Jan 09 09:51:10 2018
+AVRASM ver. 2.2.7  D:\H3\Embedded\Embedded_I\opgave10_new\main.asm Tue Jan 09 10:35:40 2018
 
-[builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
-C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm(36): Including file 'C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\ProjectDefine.inc'
-C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\ProjectDefine.inc(13): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
-[builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
-C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm(36): Including file 'C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\ProjectDefine.inc'
-C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\ProjectDefine.inc(13): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
+[builtin](2): Including file 'D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
+D:\H3\Embedded\Embedded_I\opgave10_new\main.asm(36): Including file 'D:\H3\Embedded\Embedded_I\opgave10_new\ProjectDefine.inc'
+D:\H3\Embedded\Embedded_I\opgave10_new\ProjectDefine.inc(13): Including file 'D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
+[builtin](2): Including file 'D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
+D:\H3\Embedded\Embedded_I\opgave10_new\main.asm(36): Including file 'D:\H3\Embedded\Embedded_I\opgave10_new\ProjectDefine.inc'
+D:\H3\Embedded\Embedded_I\opgave10_new\ProjectDefine.inc(13): Including file 'D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
                                  
                                  ;
                                  
@@ -1089,27 +1089,25 @@ C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_
                                  	#endif
                                  
                                  .org	RWW_START_ADDR
-000000 c033                      	rjmp	main	
-                                 .org		INT_VECTORS_SIZE
+000000 c033                      rjmp	main	
+                                 .org	INT_VECTORS_SIZE
                                  
                                  main:
-000034 2700                      	clr    key		;Set all bits to 0
-000035 ef1f                        ldi    LED, 0xFF	;sets r16 to 111111111 b
-000036 b914                        out    DDRB, LED  ;Set all bit in Port B to Output
-000037 b907                        out    DDRC, key  ;set all bits to 0 in port d to ensure input
-                                 					; this is not nessecary, but its good practice 
-000038 d005                        rcall  red
+000034 2700                      	clr    key			;Set all bits to 0
+000035 ef1f                      	ldi    LED, 0xFF	;sets r16 to 111111111 b
+000036 b914                      	out    DDRB, LED	;Set all bit in Port B to Output
+000037 b907                      	out    DDRC, key	;set all bits to 0 in port d to ensure input
+                                 						; this is not nessecary, but its good practice 
+000038 d005                      	rcall  red
                                    		
                                  mainloop:
                                     
-000039 9930                         sbic		PINC,0
-                                      
-00003a d007                         rcall	yellow 
-00003b 9b30                         sbis		PINC,0
-                                     
+000039 9930                      	sbic	PINC,0
+00003a d007                      	rcall	yellow
+                                 	 
+00003b 9b30                      	sbis	PINC,0
 00003c d008                      	rcall	green
-                                      
-00003d cffb                          rjmp  mainloop
+00003d cffb                          rjmp	mainloop
                                    ;Bit 1 : Red 
                                    ;Bit 2 : Yellow 
                                    ;Bit 3 : Green

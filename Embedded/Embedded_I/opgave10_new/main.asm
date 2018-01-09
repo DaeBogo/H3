@@ -36,27 +36,25 @@ Efter endt fremlæggelse afleveres software og dokumentation til underviseren, de
 .include "ProjectDefine.inc"
 
 .org	RWW_START_ADDR
-	rjmp	main	
-.org		INT_VECTORS_SIZE
+rjmp	main	
+.org	INT_VECTORS_SIZE
 
 main:
-	clr    key		;Set all bits to 0
-  ldi    LED, 0xFF	;sets r16 to 111111111 b
-  out    DDRB, LED  ;Set all bit in Port B to Output
-  out    DDRC, key  ;set all bits to 0 in port d to ensure input
-					; this is not nessecary, but its good practice 
-  rcall  red
+	clr    key			;Set all bits to 0
+	ldi    LED, 0xFF	;sets r16 to 111111111 b
+	out    DDRB, LED	;Set all bit in Port B to Output
+	out    DDRC, key	;set all bits to 0 in port d to ensure input
+						; this is not nessecary, but its good practice 
+	rcall  red
   		
 mainloop:
    
-   sbic		PINC,0
-     
-   rcall	yellow 
-   sbis		PINC,0
-    
+	sbic	PINC,0
+	rcall	yellow
+	 
+	sbis	PINC,0
 	rcall	green
-     
-    rjmp  mainloop
+    rjmp	mainloop
   ;Bit 1 : Red 
   ;Bit 2 : Yellow 
   ;Bit 3 : Green
