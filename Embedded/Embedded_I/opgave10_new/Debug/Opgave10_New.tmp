@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega168"</DEVICE>
+ <WORKING_DIR>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</FILE>
+  <FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\ProjectDefine.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\Debug\Opgave10_New.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Opgave10_New.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Opgave10_New.map</FILE>
+  <FILE>Opgave10_New.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>42</LINE></main>
+  <red><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>65</LINE></red>
+  <mainloop><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>50</LINE></mainloop>
+  <yellow><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>71</LINE></yellow>
+  <green><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>76</LINE></green>
+  <delay><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>84</LINE></delay>
+  <loop1><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>86</LINE></loop1>
+  <loop2><FILE>C:\Lars\Tech College\Data\Odins Øje\Hovedforløb\Embedded I  6272\LTPE\Assembler_Projekter\Gruppe1\H3-master\Embedded\Embedded_I\opgave10_New\Opgave10_New\main.asm</FILE><LINE>89</LINE></loop2>
+ </LABELS>
+</ASSEMBLER_INFO>
