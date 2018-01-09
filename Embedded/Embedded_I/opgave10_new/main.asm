@@ -1,8 +1,8 @@
 ;
-; opgave10.asm
+; Opgave10_New.asm
 ;
-; Created: 08/01/2018 10:24:50
-; Author : Henrik Eriksen
+; Created: 09-01-2018 09:30:06
+; Author : ltpe
 ;
 
 /*
@@ -33,22 +33,29 @@ Ekstra opgave 2
 Efter endt fremlæggelse afleveres software og dokumentation til underviseren, der bedømmer materialet. Der lægges vægt på læsbarhed og struktur.
 */
 
-	.include "ProjectDefine.inc"
-	//.include "m168def.inc"	.org		RWW_START_ADDR	rjmp		main
-	.org		INT_VECTORS_SIZE
-main: 
-  clr    key		;Set all bits to 0
+.include "ProjectDefine.inc"
+
+.org	RWW_START_ADDR
+	rjmp	main	
+.org		INT_VECTORS_SIZE
+
+main:
+	clr    key		;Set all bits to 0
   ldi    LED, 0xFF	;sets r16 to 111111111 b
   out    DDRB, LED  ;Set all bit in Port B to Output
   out    DDRC, key  ;set all bits to 0 in port d to ensure input
 					; this is not nessecary, but its good practice 
   rcall  red
   		
-  mainloop: 
-    sbic  PINC, 0 
-    rcall  yellow 
-    sbis  PINC, 0 
-    rcall  green 
+mainloop:
+   
+   sbic		PINC,0
+     
+   rcall	yellow 
+   sbis		PINC,0
+    
+	rcall	green
+     
     rjmp  mainloop
   ;Bit 1 : Red 
   ;Bit 2 : Yellow 

@@ -1,18 +1,20 @@
 /*
  * ProjectDefine.inc
  *
- *  Created: 08/01/2018 12:31:46
- *   Author: Henrik Eriksen
+ *  Created: 09-01-2018 09:43:01
+ *   Author: ltpe
  */ 
-	#define ATMEGA168
+
+ #define ATMEGA168
 	#undef ATMEGA328P
 	#undef ATMEGA2560
 				
 	#if defined(ATMEGA168)
 		.include "m168def.inc"
 		
-	;	.def KEY = r16
-	;	.def LED = r17	
+		.def KEY = r16
+		.def LED = r17	
+		.def count = r18
 	
 	#endif
 
