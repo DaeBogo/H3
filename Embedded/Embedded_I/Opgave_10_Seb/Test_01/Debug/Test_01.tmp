@@ -1,0 +1,35 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega168"</DEVICE>
+ <WORKING_DIR>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</FILE>
+  <FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\Signals.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\Debug\Test_01.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Test_01.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Test_01.map</FILE>
+  <FILE>Test_01.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>22</LINE></main>
+  <startloop><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>29</LINE></startloop>
+  <loop><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>36</LINE></loop>
+  <delay><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>96</LINE></delay>
+  <arrowWE><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>90</LINE></arrowWE>
+  <arrowNS><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>85</LINE></arrowNS>
+  <loop1><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>98</LINE></loop1>
+  <loop2><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Test_01\Test_01\main.asm</FILE><LINE>101</LINE></loop2>
+ </LABELS>
+</ASSEMBLER_INFO>
