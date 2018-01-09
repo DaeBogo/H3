@@ -1,0 +1,34 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega168"</DEVICE>
+ <WORKING_DIR>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc</FILE>
+  <FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\ProjectDefine.inc</FILE>
+  <FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\Signals.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\Debug\Opgave_10_DONE.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Opgave_10_DONE.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Opgave_10_DONE.map</FILE>
+  <FILE>Opgave_10_DONE.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</FILE><LINE>12</LINE></main>
+  <startloop><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</FILE><LINE>19</LINE></startloop>
+  <loop><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</FILE><LINE>26</LINE></loop>
+  <delay><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</FILE><LINE>75</LINE></delay>
+  <loop1><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</FILE><LINE>77</LINE></loop1>
+  <loop2><FILE>C:\Users\Birdface\Documents\Atmel Studio\7.0\Opgave_10_DONE\Opgave_10_DONE\main.asm</FILE><LINE>80</LINE></loop2>
+ </LABELS>
+</ASSEMBLER_INFO>
