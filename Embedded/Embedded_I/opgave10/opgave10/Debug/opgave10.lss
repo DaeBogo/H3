@@ -1,0 +1,20 @@
+
+AVRASM ver. 2.2.7  D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm Tue Jan 09 09:13:48 2018
+
+[builtin](2): Including file 'D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(36): Including file 'D:\H3\Embedded\Embedded_I\opgave10\opgave10\ProjectDefine.inc'
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\ProjectDefine.inc(12): Including file 'D:/Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m168def.inc'
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(39): error: Invalid character: '' (0x0d)
+
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(39): error: Invalid character: '' (0x0d)
+
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(47): error: Invalid character: '' (0x0d)
+
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(48): error: Invalid character: '' (0x0d)
+
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(49): error: Invalid character: '' (0x0d)
+
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(50): error: Invalid character: '' (0x0d)
+
+D:\H3\Embedded\Embedded_I\opgave10\opgave10\main.asm(51): error: Invalid character: '' (0x0d)
+
