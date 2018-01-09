@@ -58,16 +58,16 @@ main:
 	rjmp	loop
 
 	; North South
-	;Bit 0 : Red
-	;Bit 1 : Yellow
-	;Bit 2 : Green
-	;Bit 6 : Arrow
+	;Bit 0	PORT B	: Red
+	;Bit 1	PORT B	: Yellow
+	;Bit 2	PORT B	: Green
+	;Bit 6	PORT D	: Arrow 
 
 	; West East
-	;Bit 3 : Red
-	;Bit 4 : Yellow
-	;Bit 5 : Green
-	;Bit 7 : Arrow
+	;Bit 3	PORT B	: Red
+	;Bit 4	PORT B	: Yellow
+	;Bit 5	PORT B	: Green
+	;Bit 7	PORT D	: Arrow
 	
 
 
