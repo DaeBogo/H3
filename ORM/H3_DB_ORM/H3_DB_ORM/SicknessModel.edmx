@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_SicknessModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DB_SicknessModelStoreContainer">
+    <EntitySet Name="Tbl_Sickness" EntityType="DB_SicknessModel.Store.Tbl_Sickness" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_Symptoms" EntityType="DB_SicknessModel.Store.Tbl_Symptoms" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_Treatment" EntityType="DB_SicknessModel.Store.Tbl_Treatment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_Medication" EntityType="DB_SicknessModel.Store.Tbl_Medication" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tbl_Effects" EntityType="DB_SicknessModel.Store.Tbl_Effects" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="Tbl_SicknessTbl_Symptoms" Association="DB_SicknessModel.Store.Tbl_SicknessTbl_Symptoms">
+      <End Role="Tbl_Sickness" EntitySet="Tbl_Sickness" />
+      <End Role="Tbl_Symptoms" EntitySet="Tbl_Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="Tbl_SicknessTbl_Treatment" Association="DB_SicknessModel.Store.Tbl_SicknessTbl_Treatment">
+      <End Role="Tbl_Sickness" EntitySet="Tbl_Sickness" />
+      <End Role="Tbl_Treatment" EntitySet="Tbl_Treatment" />
+    </AssociationSet>
+    <AssociationSet Name="Tbl_TreatmentTbl_Medication" Association="DB_SicknessModel.Store.Tbl_TreatmentTbl_Medication">
+      <End Role="Tbl_Treatment" EntitySet="Tbl_Treatment" />
+      <End Role="Tbl_Medication" EntitySet="Tbl_Medication" />
+    </AssociationSet>
+    <AssociationSet Name="Tbl_MedicationTbl_Effects" Association="DB_SicknessModel.Store.Tbl_MedicationTbl_Effects">
+      <End Role="Tbl_Medication" EntitySet="Tbl_Medication" />
+      <End Role="Tbl_Effects" EntitySet="Tbl_Effects" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Tbl_Sickness">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Avr_Dur" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Leathality" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Symptoms">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Effect" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tbl_MedicationId" Type="int" Nullable="false" />
+    <Property Name="Tbl_Sickness_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Treatment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Medication" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tbl_SicknessId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Medication">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tbl_TreatmentId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tbl_Effects">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Effect" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tbl_MedicationId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="Tbl_SicknessTbl_Symptoms">
+    <End Role="Tbl_Sickness" Type="DB_SicknessModel.Store.Tbl_Sickness" Multiplicity="1" />
+    <End Role="Tbl_Symptoms" Type="DB_SicknessModel.Store.Tbl_Symptoms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Sickness">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tbl_Symptoms">
+        <PropertyRef Name="Tbl_Sickness_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tbl_SicknessTbl_Treatment">
+    <End Role="Tbl_Sickness" Type="DB_SicknessModel.Store.Tbl_Sickness" Multiplicity="1" />
+    <End Role="Tbl_Treatment" Type="DB_SicknessModel.Store.Tbl_Treatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Sickness">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tbl_Treatment">
+        <PropertyRef Name="Tbl_SicknessId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tbl_TreatmentTbl_Medication">
+    <End Role="Tbl_Treatment" Type="DB_SicknessModel.Store.Tbl_Treatment" Multiplicity="1" />
+    <End Role="Tbl_Medication" Type="DB_SicknessModel.Store.Tbl_Medication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Treatment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tbl_Medication">
+        <PropertyRef Name="Tbl_TreatmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tbl_MedicationTbl_Effects">
+    <End Role="Tbl_Medication" Type="DB_SicknessModel.Store.Tbl_Medication" Multiplicity="1" />
+    <End Role="Tbl_Effects" Type="DB_SicknessModel.Store.Tbl_Effects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tbl_Medication">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tbl_Effects">
+        <PropertyRef Name="Tbl_MedicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_SicknessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_SicknessEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Tbl_Sickness" EntityType="DB_SicknessModel.Tbl_Sickness" />
+          <EntitySet Name="Tbl_Symptoms" EntityType="DB_SicknessModel.Tbl_Symptoms" />
+          <AssociationSet Name="Tbl_SicknessTbl_Symptoms" Association="DB_SicknessModel.Tbl_SicknessTbl_Symptoms">
+            <End Role="Tbl_Sickness" EntitySet="Tbl_Sickness" />
+            <End Role="Tbl_Symptoms" EntitySet="Tbl_Symptoms" />
+          </AssociationSet>
+          <EntitySet Name="Tbl_Treatment" EntityType="DB_SicknessModel.Tbl_Treatment" />
+          <AssociationSet Name="Tbl_SicknessTbl_Treatment" Association="DB_SicknessModel.Tbl_SicknessTbl_Treatment">
+            <End Role="Tbl_Sickness" EntitySet="Tbl_Sickness" />
+            <End Role="Tbl_Treatment" EntitySet="Tbl_Treatment" />
+          </AssociationSet>
+          <EntitySet Name="Tbl_Medication" EntityType="DB_SicknessModel.Tbl_Medication" />
+          <AssociationSet Name="Tbl_TreatmentTbl_Medication" Association="DB_SicknessModel.Tbl_TreatmentTbl_Medication">
+            <End Role="Tbl_Treatment" EntitySet="Tbl_Treatment" />
+            <End Role="Tbl_Medication" EntitySet="Tbl_Medication" />
+          </AssociationSet>
+          <EntitySet Name="Tbl_Effects" EntityType="DB_SicknessModel.Tbl_Effects" />
+          <AssociationSet Name="Tbl_MedicationTbl_Effects" Association="DB_SicknessModel.Tbl_MedicationTbl_Effects">
+            <End Role="Tbl_Medication" EntitySet="Tbl_Medication" />
+            <End Role="Tbl_Effects" EntitySet="Tbl_Effects" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Tbl_Sickness">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Avr_Dur" Type="String" Nullable="false" />
+          <NavigationProperty Name="Tbl_Symptoms" Relationship="DB_SicknessModel.Tbl_SicknessTbl_Symptoms" FromRole="Tbl_Sickness" ToRole="Tbl_Symptoms" />
+          <NavigationProperty Name="Tbl_Treatment" Relationship="DB_SicknessModel.Tbl_SicknessTbl_Treatment" FromRole="Tbl_Sickness" ToRole="Tbl_Treatment" />
+          <Property Name="Leathality" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tbl_Symptoms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Tbl_Sickness" Relationship="DB_SicknessModel.Tbl_SicknessTbl_Symptoms" FromRole="Tbl_Symptoms" ToRole="Tbl_Sickness" />
+          <Property Name="Effect" Type="String" Nullable="false" />
+          <Property Name="Tbl_MedicationId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="Tbl_SicknessTbl_Symptoms">
+          <End Type="DB_SicknessModel.Tbl_Sickness" Role="Tbl_Sickness" Multiplicity="1" />
+          <End Type="DB_SicknessModel.Tbl_Symptoms" Role="Tbl_Symptoms" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Tbl_Treatment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Medication" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Tbl_Sickness" Relationship="DB_SicknessModel.Tbl_SicknessTbl_Treatment" FromRole="Tbl_Treatment" ToRole="Tbl_Sickness" />
+          <Property Name="Tbl_SicknessId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Tbl_Medication" Relationship="DB_SicknessModel.Tbl_TreatmentTbl_Medication" FromRole="Tbl_Treatment" ToRole="Tbl_Medication" />
+        </EntityType>
+        <Association Name="Tbl_SicknessTbl_Treatment">
+          <End Type="DB_SicknessModel.Tbl_Sickness" Role="Tbl_Sickness" Multiplicity="1" />
+          <End Type="DB_SicknessModel.Tbl_Treatment" Role="Tbl_Treatment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Sickness">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tbl_Treatment">
+              <PropertyRef Name="Tbl_SicknessId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tbl_Medication">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Tbl_Treatment" Relationship="DB_SicknessModel.Tbl_TreatmentTbl_Medication" FromRole="Tbl_Medication" ToRole="Tbl_Treatment" />
+          <Property Name="Tbl_TreatmentId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Tbl_Effects" Relationship="DB_SicknessModel.Tbl_MedicationTbl_Effects" FromRole="Tbl_Medication" ToRole="Tbl_Effects" />
+        </EntityType>
+        <Association Name="Tbl_TreatmentTbl_Medication">
+          <End Type="DB_SicknessModel.Tbl_Treatment" Role="Tbl_Treatment" Multiplicity="1" />
+          <End Type="DB_SicknessModel.Tbl_Medication" Role="Tbl_Medication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Treatment">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tbl_Medication">
+              <PropertyRef Name="Tbl_TreatmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tbl_Effects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Effect" Type="String" Nullable="false" />
+          <NavigationProperty Name="Tbl_Medication" Relationship="DB_SicknessModel.Tbl_MedicationTbl_Effects" FromRole="Tbl_Effects" ToRole="Tbl_Medication" />
+          <Property Name="Tbl_MedicationId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="Tbl_MedicationTbl_Effects">
+          <End Type="DB_SicknessModel.Tbl_Medication" Role="Tbl_Medication" Multiplicity="1" />
+          <End Type="DB_SicknessModel.Tbl_Effects" Role="Tbl_Effects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tbl_Medication">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Tbl_Effects">
+              <PropertyRef Name="Tbl_MedicationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_SicknessModelStoreContainer" CdmEntityContainer="DB_SicknessEntities">
+    <EntitySetMapping Name="Tbl_Sickness">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SicknessModel.Tbl_Sickness)">
+        <MappingFragment StoreEntitySet="Tbl_Sickness">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Avr_Dur" ColumnName="Avr_Dur" />
+          <ScalarProperty Name="Leathality" ColumnName="Leathality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Symptoms">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SicknessModel.Tbl_Symptoms)">
+        <MappingFragment StoreEntitySet="Tbl_Symptoms">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="Tbl_MedicationId" ColumnName="Tbl_MedicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Treatment">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SicknessModel.Tbl_Treatment)">
+        <MappingFragment StoreEntitySet="Tbl_Treatment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Medication" ColumnName="Medication" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tbl_SicknessId" ColumnName="Tbl_SicknessId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Medication">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SicknessModel.Tbl_Medication)">
+        <MappingFragment StoreEntitySet="Tbl_Medication">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Tbl_TreatmentId" ColumnName="Tbl_TreatmentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Effects">
+      <EntityTypeMapping TypeName="IsTypeOf(DB_SicknessModel.Tbl_Effects)">
+        <MappingFragment StoreEntitySet="Tbl_Effects">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="Tbl_MedicationId" ColumnName="Tbl_MedicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Tbl_SicknessTbl_Symptoms" TypeName="DB_SicknessModel.Tbl_SicknessTbl_Symptoms" StoreEntitySet="Tbl_Symptoms">
+      <EndProperty Name="Tbl_Sickness">
+        <ScalarProperty Name="Id" ColumnName="Tbl_Sickness_Id" />
+      </EndProperty>
+      <EndProperty Name="Tbl_Symptoms">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
